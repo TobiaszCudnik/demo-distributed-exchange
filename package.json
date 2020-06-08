@@ -1,0 +1,33 @@
+{
+  "name": "bitfinex-distex",
+  "author": "Tobias Cudnik <tobiasz.cudnik@gmail.com>",
+  "engines": {
+    "node": "^13.0.0"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^14.0.10",
+    "debug": "^4.1.1",
+    "delay": "^4.3.0",
+    "grenache-grape": "^0.9.10",
+    "grenache-nodejs-http": "^0.7.8",
+    "grenache-nodejs-link": "^0.7.12",
+    "lodash.sample": "^4.2.1",
+    "lodash.without": "^4.4.0",
+    "prettier": "^2.0.5",
+    "range": "^0.0.3",
+    "simple-random": "^1.0.3",
+    "source-map-support": "^0.5.19",
+    "typescript": "^3.9.3"
+  },
+  "scripts": {
+    "build:watch": "tsc --watch",
+    "build": "tsc",
+    "network": "grape --dp 20001 --aph 30001 --bn '127.0.0.1:20001' & grape --dp 20002 --aph 40001 --bn '127.0.0.1:20002'",
+    "test": "DEBUG=distex:* node test.js",
+    "test:full": "DEBUG=distex:* node test.js 1024",
+    "start": "yarn build && yarn network & yarn test"
+  }
+}
