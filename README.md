@@ -1,4 +1,4 @@
-PoC of a distributed crypto exchange using the Grenache RCP framework as a part of an interview process with Bitfinex.
+PoC of a distributed crypto exchange using the Grenache RCP framework as a part of an interview process with Bitfinex (2020).
 
 ## Run
 
